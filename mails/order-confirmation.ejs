@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        .course-info {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #777;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message-sm">
+            <h1>Your Elearning Order is Confirmed!</h1>
+            <p>We're just as excited as you are.</p>
+        </div>
+
+        <div class="course-info">
+            <h4>Here's What You Ordered:</h4>
+            
+            <table>
+                <tr>
+                    <th>Order #</th>
+                    <th>Order Date</th>
+                </tr>
+                <tr>
+                    <td><%= order._id %></td>
+                    <td><%= order.date %></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td><%= order.name %></td>
+                    <td>1</td>
+                    <td>$<%= order.price %></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>Subtotal:</td>
+                    <td>$<%= order.price %></td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td>$<%= order.price %></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>If you have any questions, please contact our support team at:
+                <a href="mailto:mansvi0859.be21@chitkara.edu.in">mansvi0859.be21@chitkara.edu.in</a>
+                <a href="mailto:mridul0892.be21@chitkara.edu.in">mridul0892.be21@chitkara.edu.in</a>
+            </p>
+            <p>&copy; 2024 ELearning. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
